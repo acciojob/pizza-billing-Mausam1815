@@ -37,7 +37,7 @@ public class Pizza {
         if(!extraToppingsAdded) {
             int toppingsPrice = isVeg ? 70 : 120;
             this.price += toppingsPrice;
-            this.bill += "\nExtra Toppings Added: ";
+            this.bill += "\nExtra Toppings Added: " + toppingsPrice;
             extraToppingsAdded = true;
         }
     }
