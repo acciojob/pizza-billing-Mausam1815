@@ -72,6 +72,6 @@ public class Pizza {
         }
 
         bill += "Total Price: " + this.price + "\n";
-        return this.bill;git git
+        return this.bill;
     }
 }
