@@ -47,14 +47,31 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        this.bill = isVeg ? "Base Price Of The Pizza: 300\n" : "Base Price Of The Pizza: 400\n";
-        this.bill += extraCheeseAdded ? "Extra Cheese Added: 80\n" : "";
-        if(extraToppingsAdded) {
-            this.bill += isVeg ? "Extra Toppings Added: 70\n" : "Extra Toppings Added: 120\n";
+        if(isVeg){
+            bill = "Base Price Of The Pizza: 300 \n";
         }
-        this.bill += paperBagAdded ? "Paperbag Added: 20\n" : "";
+        else{
+            bill = "Base Price Of The Pizza: 400 \n";
+        }
 
-        this.bill += "Total Price: " + this.price;
+        if(extraCheeseAdded){
+            bill += "Extra Cheese Added: 80 \n";
+        }
+
+        if(extraToppingsAdded){
+            if(isVeg){
+                bill += "Extra Toppings Added: 70 \n";
+            }
+            else{
+                bill += "Extra Toppings Added: 120 \n";
+            }
+        }
+
+        if(paperBagAdded){
+            bill += "Paperbag Added: 20 \n";
+        }
+
+        bill += "Total Price: " + this.price;
         return this.bill;
     }
 }
